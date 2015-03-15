@@ -329,4 +329,29 @@
                  "speedy.com.ar" "arnet.com.ar"]
             :mx ["hotmail.com" "gmail.com" "yahoo.com.mx" "live.com.mx"
                  "yahoo.com" "hotmail.es" "live.com" "hotmail.com.mx"
-                 "prodigy.net.mx" "msn.com"]}}}
+                 "prodigy.net.mx" "msn.com"]}
+  :markov-transition-counts {:testing {"." {"i" 5
+                                            "sometimes" 1
+                                            "he" 2
+                                            "she" 2}
+                                       "he" {"is" 1}
+                                       "she" {"is" 1}
+                                       "is" {"happy" 10
+                                             "sad" 3}
+                                       "am" {"happy" 6
+                                             "sad" 3
+                                             "." 1}
+                                       "sometimes" {"though" 3
+                                                    "," 2
+                                                    "i" 1}
+                                       "though" {"i" 1
+                                                 "," 10}
+                                       "i" {"want" 5
+                                            "am" 5}
+                                       "want" {"something" 1}
+                                       "happy" {"," 8
+                                                "." 2}
+                                       "," {"i" 1
+                                            "happy" 9}
+                                       "sad" {"." 7}
+                                       "something" {"." 10}}}}}
