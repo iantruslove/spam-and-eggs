@@ -7,9 +7,8 @@ is complete gibberish, but kinda looks real. Using this, and some
 other data generation based on somewhat real-world statistics of
 emails, people, and words, you can generate emails.
 
-The app might be running at
+The app will eventually be running at
 [https://spam-and-eggs.herokuapp.com](https://spam-and-eggs.herokuapp.com).
-Give it a go!
 
 ## Usage
 

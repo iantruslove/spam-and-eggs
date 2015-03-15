@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<!--
+    Astral by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  -->
+<html>
+  <head>
+    <title>Spam And Eggs: Tasty, Tasty Emails</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Strangely realistic but entirely nonsensical email generator." />
+    <meta name="keywords" content="email generative markov statistical language processing machine learning foo" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="css/skel.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/style-desktop.css" />
+      <link rel="stylesheet" href="css/style-noscript.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+  </head>
+  <body>
+
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+      <!-- Nav -->
+      <nav id="nav">
+        <a href="#email" class="icon fa-home active"><span>Home</span></a>
+        <a href="#people" class="icon fa-users"><span>People</span></a>
+        <a href="#api" class="icon fa-download"><span>API</span></a>
+        <a href="#about" class="icon fa-github"><span>About</span></a>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- Email -->
+        <article id="email" class="panel">
+          <header>
+            <h1>Spam and Eggs</h1>
+            <p>Tasty, tasty emails, coming really soon...</p>
+          </header>
+          <!-- <a href="#api" class="jumplink pic"> -->
+          <!--   <span class="arrow icon fa-chevron-right"><span>See my work</span></span> -->
+          <!--   <img src="images/me.jpg" alt="" /> -->
+          <!-- </a> -->
+        </article>
+
+        <!-- API -->
+        <article id="api" class="panel">
+          <header>
+            <h2>API</h2>
+          </header>
+          
+          <h3>Status: work in progress</h3>
+          <p>
+            The point of this tool was to provide a way to generate a
+            whole number of emails representing an individual's or an
+            organization's email interactions over a period of time.
+          </p>
+          <p>
+            This website provides examples of what the API can
+            provide, but the API is actually way better for generating
+            "real" test corpuses.
+          </p>
+          <p>
+            Right now, I don't have any API docs for you. Sorry, I'm
+            working on it. If you're really keen, check out the JS
+            source, you'll get the idea.
+          </p>
+        </article>
+
+        <!-- People -->
+        <article id="people" class="panel">
+          <header>
+            <h2>People</h2>
+          </header>
+          <p>
+            
+          </p>
+          <div>
+            <div class="row">
+              <div class="2u"></div>
+              <div class="8u"> 
+                <p class="fa fa-user">John Smith (john.smith@gmail.com)</p>
+              </div>
+              <div class="2u">
+              </div>
+            </div>
+            <div class="row">
+              <div class="12u">
+                <input id="button-regenerate-contact-list" type="submit" value="Generate 20 More..." />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- About -->
+        <article id="about" class="panel">
+          <header>
+            <h2>About Spam and Eggs</h2>
+          </header>
+
+          <h3>Source</h3>
+          <p>
+            You can download the source, or let me know about problems
+            on
+            <a href="https://github.com/iantruslove/spam-and-eggs">
+              GitHub</a>. 
+          </p>
+
+          <h3>Contact</h3>
+          <p>
+            If you like this, or if you hate it, I'd love to hear
+            from you. Drop me a line:
+            <br><span class="fa fa-twitter"></span>
+            <a href="https://twitter.com/iantruslove">@iantruslove</a>
+            <br><span class="fa fa-envelope-o"></span> first dot last
+            at gmail dot com.
+          </p>
+
+          <h3>Models</h3>
+          <p>
+            The personal information is generated from a couple of
+            lists of common names and email domains, plus some basic
+            frequency distribution models. I use the generators in
+            <a href="https://github.com/clojure/test.check">test.check</a>
+            to select items from lists, because it makes it really easy.
+          </p>
+
+          <p>
+            Using demographic data to get common first and last name
+            frequencies, it's possible to generate eerily familiar
+            names and email addresses. If you know anybody generated
+            by this site list, I promise it's just a
+            coincidence...
+          </p>
+
+          <p>
+            The email text is generated with
+            a <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov
+              chain</a>.  Right now the transition probabilities between
+            states were generated by me by hand, which explains the
+            utter ridiculousness, simplisticness and lack of variation
+            in the text.
+          </p>
+
+          <h3>Tech</h3>
+          <p>
+            Spam and Eggs is written in Clojure, and hosted
+            by <a href="http://www.heroku.com"> Heroku
+            </a>. Both of these are quite great.
+          </p>
+
+          <h3>Inspiration</h3>
+          <p>
+            I spend my work time working with systems that analyze
+            emails. The quality of results of the statistical, text
+            analytics and machine learning work is quite dependent on
+            the input data, and I was getting tired of hacking emails
+            from the <a href="https://www.cs.cmu.edu/~./enron/"> Enron
+            corpus</a> into the shape I wanted. At first I was just
+            creating email addresses with real-looking names, but it
+            quickly spread into text generation using Markov. It's a
+            fun toy.
+          </p>
+
+          <h3>License</h3>
+          <p>
+            This work is licensed under
+            the <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
+              Public License</a>. You're on your own, kid.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <ul class="copyright">
+          <li>Spam and Eggs is &copy; Ian Truslove.</li><li>Sweet site template by <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-60781828-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
