@@ -1,5 +1,5 @@
-(ns email-generator.markov
-  (:require [email-generator.config :refer [config]]))
+(ns spam-and-eggs.markov
+  (:require [spam-and-eggs.config :refer [config]]))
 
 (def transition-count-map )
 

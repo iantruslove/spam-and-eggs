@@ -1,5 +1,5 @@
-(ns email-generator.persona
-  (:require [email-generator.config :refer [config]]
+(ns spam-and-eggs.persona
+  (:require [spam-and-eggs.config :refer [config]]
             [clojure.test.check.generators :as gen]))
 
 (defn generatorize-freq-pair-values [pairs]

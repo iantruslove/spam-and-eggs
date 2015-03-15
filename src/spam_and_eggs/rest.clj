@@ -1,4 +1,4 @@
-(ns email-generator.rest)
+(ns spam-and-eggs.rest)
 
 (defn handler [req]
   {:status 200

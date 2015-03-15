@@ -1,4 +1,4 @@
-(ns email-generator.webserver
+(ns spam-and-eggs.webserver
   (:require [ring.adapter.jetty :as jetty]))
 
 (defn init [cfg]

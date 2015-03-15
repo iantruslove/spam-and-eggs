@@ -1,7 +1,7 @@
-(defproject email-generator "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :main email-generator.app
+(defproject spam-and-eggs "0.1.0-SNAPSHOT"
+  :description "If it looks like spam, and it tastes like spam..."
+  :url "http://spam-and-eggs.heroku.com"
+  :main spam-and-eggs.app
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]

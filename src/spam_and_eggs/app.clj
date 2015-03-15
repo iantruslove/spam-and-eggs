@@ -1,6 +1,6 @@
-(ns email-generator.app
-  (:require [email-generator.rest :as rest]
-            [email-generator.webserver :as webserver]
+(ns spam-and-eggs.app
+  (:require [spam-and-eggs.rest :as rest]
+            [spam-and-eggs.webserver :as webserver]
             [clojure.tools.logging :as log]))
 
 (defonce system (atom {}))
