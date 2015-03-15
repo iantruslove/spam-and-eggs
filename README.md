@@ -1,20 +1,31 @@
-# email-generator
+# spam-and-eggs
 
-Generate realistic-looking emails.
+_Serving up tasty, tasty, fake emails._
 
-The app might be running at https://spam-and-eggs.herokuapp.com
+Markov chains are a fun little toy you can use to generate text that
+is complete gibberish, but kinda looks real. Using this, and some
+other data generation based on somewhat real-world statistics of
+emails, people, and words, you can generate emails.
+
+The app might be running at
+[https://spam-and-eggs.herokuapp.com](https://spam-and-eggs.herokuapp.com).
+Give it a go!
 
 ## Usage
 
-Start the server:
+Start the server locally:
 
-`lein run 8080`
+    lein run 8080
+
+Deploy to Heroku:
+
+    heroku login
+    git push heroku master
 
 ## TODO
 
 * Email structure generator
 * Web app front end & REST API
-* Heroku deployment
 * Reply and Forward simulation
 * Token frequency analyzer to generate Markov chain transition frequencies
 * Externalize Markov model data (into binary files?)
