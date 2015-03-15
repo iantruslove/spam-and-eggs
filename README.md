@@ -2,6 +2,8 @@
 
 Generate realistic-looking emails.
 
+The app might be running at https://spam-and-eggs.herokuapp.com
+
 ## Usage
 
 Start the server:

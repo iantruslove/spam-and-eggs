@@ -1,4 +1,5 @@
 (ns spam-and-eggs.app
+  (:gen-class)
   (:require [spam-and-eggs.rest :as rest]
             [spam-and-eggs.webserver :as webserver]
             [clojure.tools.logging :as log]))
