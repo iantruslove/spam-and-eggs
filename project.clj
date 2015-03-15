@@ -7,7 +7,8 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :uberjar-name "spam-and-eggs.jar"
   :profiles {:uberjar {:aot :all}}
-  :dependencies [[org.clojure/clojure "1.6.0"]
+  :dependencies [[compojure "1.3.2"]
+                 [org.clojure/clojure "1.6.0"]
                  [org.clojure/test.check "0.7.0"]
                  [ring "1.3.2"]
                  [sonian/carica "1.1.0" :exclusions [[cheshire]]]])
