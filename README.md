@@ -2,6 +2,12 @@
 
 Generate realistic-looking emails.
 
+## Usage
+
+Start the server:
+
+`lein run 8080`
+
 ## TODO
 
 * Email structure generator
