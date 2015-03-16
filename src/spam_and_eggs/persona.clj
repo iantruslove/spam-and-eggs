@@ -16,12 +16,12 @@
 
 (def last-name-generator (frequency-generatorize (config :data :last-names)))
 
-(def email-host-generator (gen/elements (config :data :domains :default)))
+(def email-domain-generator (gen/elements (config :data :domains :default)))
 
-(defn persona [first-name last-name email-host prolificness]
+(defn persona [first-name last-name email-domain prolificness]
   {:first-name first-name
    :last-name last-name
-   :email-host email-host
+   :email-domain email-domain
    :email-address-format :first-dot-last
    :email-pretty-name :quoted-first-last
    :email-body-persona :business
@@ -32,6 +32,6 @@
   (gen/sample (gen/fmap (partial apply persona)
                         (gen/tuple first-name-generator
                                    last-name-generator
-                                   email-host-generator
+                                   email-domain-generator
                                    gen/s-pos-int))
               n))
