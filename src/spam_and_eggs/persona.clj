@@ -23,7 +23,7 @@
    :last-name last-name
    :email-domain email-domain
    :email-address-format :first-dot-last
-   :email-pretty-name :quoted-first-last
+   :email-pretty-name :unquoted-first-last ;; :none :quoted-first-last :unquoted-first-last, commas 
    :email-body-persona :business
    :email-body-length :short
    :prolificness prolificness})
