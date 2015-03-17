@@ -1,6 +1,6 @@
 (ns spam-and-eggs.persona
-  (:require [spam-and-eggs.config :refer [config]]
-            [clojure.test.check.generators :as gen]))
+  (:require [clojure.test.check.generators :as gen]
+            [spam-and-eggs.config :refer [config]]))
 
 (defn generatorize-freq-pair-values [pairs]
   (map (fn [[k v]] [k (gen/return v)]) pairs))

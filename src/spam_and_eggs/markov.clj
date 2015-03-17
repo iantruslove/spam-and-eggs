@@ -1,5 +1,4 @@
-(ns spam-and-eggs.markov
-  (:require [spam-and-eggs.config :refer [config]]))
+(ns spam-and-eggs.markov)
 
 (def transition-count-map )
 
@@ -47,6 +46,7 @@
           '(".")))
 
 (comment
+  (use '[spam-and-eggs.config])
   (apply println
          (interleave
           (let [transition-fns (-> (config :data :markov-transition-counts :testing)
