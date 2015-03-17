@@ -25,11 +25,8 @@ Deploy to Heroku:
 
 * Person info generator
   * <strike>API</strike>
-  * Front end layout
-  * AJAX init and refresh
-* HTML5 templating:
-  * Only serve analytics in prod
-  * Show build and version info in footer
+  * <strike>Front end layout</strike>
+  * AJAX init and refresh - perhaps with http://www.infinite-scroll.com/
 * Email structure generator
   * API
   * Web app front end
@@ -37,6 +34,9 @@ Deploy to Heroku:
 * CORS
 * Page-by-page analytics (https://developers.google.com/analytics/devguides/collection/analyticsjs/)
 * Drop a release. Start and publish a CHANGELOG (perhaps with https://github.com/evilstreak/markdown-js)
+* HTML5 templating:
+  * Only serve analytics in prod
+  * Show build and version info in footer
 * Reply and Forward simulation
 * Token frequency analyzer to generate Markov chain transition frequencies
 * Externalize Markov model data (into binary files?)

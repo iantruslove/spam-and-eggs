@@ -85,17 +85,24 @@
           <div>
             <div class="row">
               <div class="2u"></div>
-              <div class="8u"> 
-                <p class="fa fa-user">John Smith (john.smith@gmail.com)</p>
+              <div class="8u">
+                {% for person in people %}
+                <p>
+                  <span class="fa fa-user"></span> {{person.first-name}} {{person.last-name}}<br>
+                  <span class="fa fa-envelope-o"></span> {{person.email-address}}</p>
+                {% endfor %}
               </div>
-              <div class="2u">
-              </div>
+              <div class="2u"></div>
             </div>
-            <div class="row">
-              <div class="12u">
-                <input id="button-regenerate-contact-list" type="submit" value="Generate 20 More..." />
-              </div>
-            </div>
+
+            <!-- <div class="row"> -->
+            <!--   <div class="2u"></div> -->
+            <!--   <div class="8u"> -->
+            <!--     <input id="button-regenerate-contact-list" type="submit" value="Get 5 More..." /> -->
+            <!--   </div> -->
+            <!--   <div class="2u"></div> -->
+            <!-- </div> -->
+            
           </div>
         </article>
 
@@ -182,7 +189,7 @@
       <!-- Footer -->
       <div id="footer">
         <ul class="copyright">
-          <li>Spam and Eggs is &copy; Ian Truslove.</li><li>Sweet site template by <a href="http://html5up.net">HTML5 UP</a></li>
+          <li>Spam and Eggs. &copy; Ian Truslove.</li><li>Sweet site template by <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </div>
     </div>

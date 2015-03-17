@@ -1,11 +1,13 @@
 (ns spam-and-eggs.rest
-  (:require [compojure.core :refer :all]
+  (:require [clojure.java.io :as io]
+            [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.json :as ring-json]
             [ring.middleware.keyword-params :as keyword-params]
             [ring.middleware.params :as params]
             [ring.middleware.resource :as resource]
             [ring.util.response :as resp]
+            [selmer.parser :as selmer]
             [spam-and-eggs.email :as email]
             [spam-and-eggs.persona :as persona]))
 
@@ -13,10 +15,6 @@
   (fn [req]
     (when-let [resp (handler req)]
       (update-in resp [:body] (fn [s] (str s "\n"))))))
-
-(defroutes html-routes
-  (GET "/" [] (resp/resource-response "index.html" {:root "web"}))
-  (route/resources "/" {:root "web"}))
 
 (defn param-as-int [req key default]
   (try
@@ -34,6 +32,22 @@
      {:num-addresses num-addresses
       :addresses (->> (persona/generate-personas num-addresses)
                       (map email/personal-info-map))})))
+
+(def set-template-path! (delay (selmer/set-resource-path!
+                                (io/resource "templates"))))
+
+@set-template-path!
+
+(defn index-page-handler [_]
+  (-> (selmer/render-file "index.html" {:people (->> (persona/generate-personas 5)
+                                                     (map email/personal-info-map))})
+      resp/response
+      (resp/header "content-type" "text/html;charset=UTF-8")))
+
+(defroutes html-routes
+  (GET "/" [] index-page-handler)
+  (GET "/index.html" [] index-page-handler)
+  (route/resources "/" {:root "web"}))
 
 (def api-routes
   (-> (routes (context "/api" []

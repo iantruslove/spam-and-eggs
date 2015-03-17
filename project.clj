@@ -13,4 +13,5 @@
                  [org.clojure/test.check "0.7.0"]
                  [ring "1.3.2"]
                  [ring/ring-json "0.3.1"]
+                 [selmer "0.8.2"]
                  [sonian/carica "1.1.0" :exclusions [[cheshire]]]])
