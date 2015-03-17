@@ -23,8 +23,20 @@ Deploy to Heroku:
 
 ## TODO
 
+* Person info generator
+  * <strike>API</strike>
+  * Front end layout
+  * AJAX init and refresh
+* HTML5 templating:
+  * Only serve analytics in prod
+  * Show build and version info in footer
 * Email structure generator
-* Web app front end & REST API
+  * API
+  * Web app front end
+  * AJAX
+* CORS
+* Page-by-page analytics (https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+* Drop a release. Start and publish a CHANGELOG (perhaps with https://github.com/evilstreak/markdown-js)
 * Reply and Forward simulation
 * Token frequency analyzer to generate Markov chain transition frequencies
 * Externalize Markov model data (into binary files?)
