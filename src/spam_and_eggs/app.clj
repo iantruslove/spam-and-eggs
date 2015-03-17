@@ -1,6 +1,6 @@
 (ns spam-and-eggs.app
   (:gen-class)
-  (:require [spam-and-eggs.rest :as rest]
+  (:require [spam-and-eggs.http.app :as http-app]
             [spam-and-eggs.webserver :as webserver]
             [clojure.tools.logging :as log]))
 
@@ -17,7 +17,7 @@
         port (::port system)]
     (log/info "Starting on port" port)
     (assoc system
-      ::webserver (-> {:port port :handler #'rest/handler}
+      ::webserver (-> {:port port :handler #'http-app/handler}
                       webserver/init
                       webserver/start)
       ::state :started)))
