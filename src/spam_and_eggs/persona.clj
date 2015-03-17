@@ -24,7 +24,7 @@
    :email-domain email-domain
    :email-address-format :first-dot-last
    :email-pretty-name :unquoted-first-last ;; :none :quoted-first-last :unquoted-first-last, commas 
-   :email-body-persona :business
+   :text-generation-model :testing
    :email-body-length :short
    :prolificness prolificness})
 
