@@ -42,12 +42,26 @@
         <article id="email" class="panel">
           <header>
             <h1>Spam and Eggs</h1>
-            <p>Tasty, tasty emails, coming really soon...</p>
+            <p>Tasty, tasty emails</p>
           </header>
-          <!-- <a href="#api" class="jumplink pic"> -->
-          <!--   <span class="arrow icon fa-chevron-right"><span>See my work</span></span> -->
-          <!--   <img src="images/me.jpg" alt="" /> -->
-          <!-- </a> -->
+
+          <div>
+            <div class="row">
+              <div class="1u"></div>
+              <div class="10u">
+                <!-- TODO: make this markup a bit more semantic, and style it with CSS -->
+                <p>
+                  <i>From:</i> {{email.from}}<br>
+                  <i>To:</i> {{email.to}}<br>
+                  <i>Date:</i> {{email.date}}<br>
+                  <i>Subject:</i> {{email.subject}}<br>
+                  <br>
+                  {{email.body}}
+                </p>
+              </div>
+              <div class="1u"></div>
+            </div>
+          </div>
         </article>
 
         <!-- API -->
@@ -55,7 +69,7 @@
           <header>
             <h2>API</h2>
           </header>
-          
+
           <h3>Status: work in progress</h3>
           <p>
             The point of this tool was to provide a way to generate a
@@ -80,7 +94,7 @@
             <h2>People</h2>
           </header>
           <p>
-            
+
           </p>
           <div>
             <div class="row">
@@ -102,7 +116,7 @@
             <!--   </div> -->
             <!--   <div class="2u"></div> -->
             <!-- </div> -->
-            
+
           </div>
         </article>
 
@@ -117,7 +131,7 @@
             You can download the source, or let me know about problems
             on
             <a href="https://github.com/iantruslove/spam-and-eggs">
-              GitHub</a>. 
+              GitHub</a>.
           </p>
 
           <h3>Contact</h3>
@@ -170,7 +184,7 @@
             analytics and machine learning work is quite dependent on
             the input data, and I was getting tired of hacking emails
             from the <a href="https://www.cs.cmu.edu/~./enron/"> Enron
-            corpus</a> into the shape I wanted. At first I was just
+              corpus</a> into the shape I wanted. At first I was just
             creating email addresses with real-looking names, but it
             quickly spread into text generation using Markov. It's a
             fun toy.

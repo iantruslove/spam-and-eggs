@@ -13,8 +13,11 @@
 @set-template-path!
 
 (defn index-page-handler [_]
-  (-> (selmer/render-file "index.html" {:people (->> (persona/generate-personas 5)
-                                                     (map email/personal-info-map))})
+  (-> (selmer/render-file "index.html"
+                          {:people (->> (persona/generate-personas 5)
+                                        (map email/personal-info-map))
+                           :email (apply email/email
+                                         (persona/generate-personas 2))})
       resp/response
       (resp/header "content-type" "text/html;charset=UTF-8")))
 
