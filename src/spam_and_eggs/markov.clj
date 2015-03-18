@@ -1,4 +1,5 @@
-(ns spam-and-eggs.markov)
+(ns spam-and-eggs.markov
+  (:import (java.lang Character)))
 
 (def transition-count-map )
 
@@ -46,20 +47,17 @@
           '(".")))
 
 (defn punctuation? [token]
-  (cond
-   (= "." token) true
-   (= "," token) true
-   :default false))
+  (re-find #"^[.,]$" token))
 
-(defn initial-caps [word]
-  (apply str (.toUpperCase (.toString (first word))) (rest word)))
+(defn initial-cap [word]
+  (apply str (Character/toUpperCase (first word)) (rest word)))
 
 (defn token-seq-to-sentence [token-seq]
   (reduce (fn [sentence token]
-            (if (punctuation? token)
-              (str sentence token)
-              (str sentence " " token)))
-          (initial-caps (first token-seq))
+            (str sentence
+                 (when-not (punctuation? token) " ")
+                 token))
+          (initial-cap (first token-seq))
           (rest token-seq)))
 
 (defn generate-sentences [n markov-model]
