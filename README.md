@@ -7,7 +7,7 @@ is complete gibberish, but kinda looks real. Using this, and some
 other data generation based on somewhat real-world statistics of
 emails, people, and words, you can generate emails.
 
-The app will eventually be running at
+The app is running at
 [https://spam-and-eggs.herokuapp.com](https://spam-and-eggs.herokuapp.com).
 
 ## Usage
@@ -29,7 +29,7 @@ Deploy to Heroku:
   * AJAX init and refresh - perhaps with http://www.infinite-scroll.com/
 * Email structure generator
   * API
-  * Web app front end
+  * <strike>Web app front end</strike>
   * AJAX
 * CORS
 * Page-by-page analytics (https://developers.google.com/analytics/devguides/collection/analyticsjs/)
