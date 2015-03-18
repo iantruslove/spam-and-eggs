@@ -54,10 +54,9 @@
                   <i>From:</i> {{email.from}}<br>
                   <i>To:</i> {{email.to}}<br>
                   <i>Date:</i> {{email.date}}<br>
-                  <i>Subject:</i> {{email.subject}}<br>
-                  <br>
-                  {{email.body}}
-                </p>
+                  <i>Subject:</i> {{email.subject|safe}}<br>
+                </p> 
+                {{email.body|linebreaks|safe}}
               </div>
               <div class="1u"></div>
             </div>
