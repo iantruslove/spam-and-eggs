@@ -69,16 +69,14 @@
     (repeatedly n #(-> (build-sentence-token-seq transition-fns)
                        token-seq-to-sentence))))
 
-(defn read-model [resource-path]
-  (-> resource-path
+(defn read-model [model]
+  (-> (str "models/" (name model) ".edn")
       io/resource
       io/reader
       PushbackReader.
       edn/read))
 
 (comment
-  (use '[spam-and-eggs.config])
-  (require '[clojure.string])
-  (println (clojure.string/join "\n"
-                                (generate-sentences 20 (config :data :markov-transition-counts :testing))))
+  (generate-sentences 20 (read-model :business))
+  (generate-sentences 20 (read-model :h2g2))
   )

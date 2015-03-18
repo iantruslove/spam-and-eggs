@@ -299,7 +299,7 @@
                [2 "Griffin"]
                [2 "Diaz"]
                [2 "Hayes"]]
-
+  :text-generation-models #{:business :h2g2}
   ;; source: https://github.com/mailcheck/mailcheck/wiki/list-of-popular-domains
   :domains {:default ["aol.com" "att.net" "comcast.net" "facebook.com"
                       "gmail.com" "gmx.com" "googlemail.com" "google.com"

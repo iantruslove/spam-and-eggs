@@ -18,13 +18,15 @@
 
 (def email-domain-generator (gen/elements (config :data :domains :default)))
 
-(defn persona [first-name last-name email-domain prolificness]
+(def text-model-generator (gen/elements (config :data :text-generation-models)))
+
+(defn persona [first-name last-name email-domain text-model prolificness]
   {:first-name first-name
    :last-name last-name
    :email-domain email-domain
    :email-address-format :first-dot-last
    :email-pretty-name :unquoted-first-last ;; :none :quoted-first-last :unquoted-first-last, commas 
-   :text-generation-model "models/h2g2.edn"
+   :text-generation-model text-model
    :email-body-length :short
    :prolificness prolificness})
 
@@ -33,5 +35,6 @@
                         (gen/tuple first-name-generator
                                    last-name-generator
                                    email-domain-generator
+                                   text-model-generator
                                    gen/s-pos-int))
               n))
