@@ -69,6 +69,13 @@
     (repeatedly n #(-> (build-sentence-token-seq transition-fns)
                        token-seq-to-sentence))))
 
+(defn read-model [resource-path]
+  (-> resource-path
+      io/resource
+      io/reader
+      PushbackReader.
+      edn/read))
+
 (comment
   (use '[spam-and-eggs.config])
   (require '[clojure.string])

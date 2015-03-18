@@ -23,8 +23,7 @@
 (defn uuid [] (str (UUID/randomUUID)))
 
 (defn email [from-persona to-persona]
-  (let [markov-model (config/config :data :markov-transition-counts
-                             (:text-generation-model from-persona))
+  (let [markov-model (markov/read-model (:text-generation-model from-persona))
         to (full-email-address to-persona)
         subject (first (markov/generate-sentences 1 markov-model))
         date (Date.)
