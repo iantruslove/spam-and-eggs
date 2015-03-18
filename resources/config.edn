@@ -330,7 +330,8 @@
             :mx ["hotmail.com" "gmail.com" "yahoo.com.mx" "live.com.mx"
                  "yahoo.com" "hotmail.es" "live.com" "hotmail.com.mx"
                  "prodigy.net.mx" "msn.com"]}
-  :markov-transition-counts {:testing {"." {"i" 5
+  :markov-transition-counts {:testing {"" {"she" 1}
+                                       "." {"i" 5
                                             "sometimes" 1
                                             "he" 2
                                             "she" 2}

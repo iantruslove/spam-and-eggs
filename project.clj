@@ -11,6 +11,7 @@
                  [compojure "1.3.2"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/test.check "0.7.0"]
+                 [org.clojure/tools.logging "0.3.1"]
                  [ring "1.3.2"]
                  [ring/ring-json "0.3.1"]
                  [selmer "0.8.2"]

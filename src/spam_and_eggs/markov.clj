@@ -1,5 +1,9 @@
 (ns spam-and-eggs.markov
-  (:import (java.lang Character)))
+  (:require [clojure.edn :as edn]
+            [clojure.java.io :as io]
+            [clojure.tools.logging :as log])
+  (:import (java.io PushbackReader)
+           (java.lang Character)))
 
 (def transition-count-map )
 
@@ -29,35 +33,33 @@
                    outcome-freqs))))
 
 (defn build-transition-fns [transition-freqs]
-  (assert (transition-freqs ".")
-          "There must be a start and end point - i.e. a period.")
+  (assert (transition-freqs "")
+          "There must be a start and end point - i.e. an empty string")
   (into {} (map (fn [[term freqs]]
                   [term (transition-fn freqs)])
                 transition-freqs)))
 
 (defn build-sentence-token-seq
   "Lazily uses the Markov generator represented by the {\"term\" fn}
-  map to generate a sentence's worth of tokens. Ensures that the last
-  token in the sentence seq is a period."
+  map to generate a sentence's worth of tokens."
   [transition-fns]
-  (concat (vec (take-while (fn [term] (not= "." term))
-                           (iterate (fn [prior-term]
-                                      ((transition-fns prior-term)))
-                                    ((transition-fns ".")))))
-          '(".")))
+  (letfn [(generator [word transition-fns]
+            (cons word (lazy-seq
+                        (if (.endsWith word ".")
+                          nil
+                          (if-let [transition-fn (transition-fns word)]
+                            (generator (transition-fn) transition-fns)
+                            (log/info (str "Generator fn not found for \"" word
+                                           "\" - last word in input data?")))))))]
+    (rest (generator "" transition-fns))))
 
-(defn punctuation? [token]
-  (re-find #"^[.,]$" token))
-
-(defn initial-cap [word]
+(defn initial-caps [word]
   (apply str (Character/toUpperCase (first word)) (rest word)))
 
 (defn token-seq-to-sentence [token-seq]
   (reduce (fn [sentence token]
-            (str sentence
-                 (when-not (punctuation? token) " ")
-                 token))
-          (initial-cap (first token-seq))
+            (str sentence " " token))
+          (initial-caps (first token-seq))
           (rest token-seq)))
 
 (defn generate-sentences [n markov-model]
