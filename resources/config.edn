@@ -1,4 +1,6 @@
-{:data
+{:app {:status-check {:delay-secs 1800
+                      :url "https://spam-and-eggs.herokuapp.com/api/_status"}}
+ :data
  {:female-first-names [[36 "Mary"]
                        [15 "Patricia"]
                        [14 "Jennifer"]

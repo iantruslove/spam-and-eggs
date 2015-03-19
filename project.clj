@@ -8,6 +8,7 @@
   :uberjar-name "spam-and-eggs.jar"
   :profiles {:uberjar {:aot :all}}
   :dependencies [[cheshire "5.4.0"]
+                 [clj-http "1.0.1"]
                  [compojure "1.3.2"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/test.check "0.7.0"]

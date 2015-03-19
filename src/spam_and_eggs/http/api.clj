@@ -31,6 +31,7 @@
 
 (def handler
   (-> (routes (context "/api" []
+                (GET "/_status" req (resp/response {:status :ok}))
                 (GET "/email-addresses" req (get-email-addresses-handler req))))
       (ring-json/wrap-json-response {:pretty true})
       wrap-trailing-newline
