@@ -21,6 +21,17 @@ Deploy to Heroku:
     heroku login
     git push heroku master
 
+Running the text file analyzer / Markov model builder:
+
+    lein analyze <filename>
+
+For example, this will create a `license` model that you can
+immediately use to generate license-esque email text:
+
+    lein analyze LICENSE > resources/models/license.edn
+
+
+
 ## TODO
 
 * Person info generator
