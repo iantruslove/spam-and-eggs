@@ -29,10 +29,10 @@
 
       <!-- Nav -->
       <nav id="nav">
-        <a href="#email" class="icon fa-home active"><span>Home</span></a>
-        <a href="#people" class="icon fa-users"><span>People</span></a>
-        <a href="#api" class="icon fa-download"><span>API</span></a>
-        <a href="#about" class="icon fa-github"><span>About</span></a>
+        <a href="#email" class="analytics-page-nav icon fa-home active"><span>Home</span></a>
+        <a href="#people" class="analytics-page-nav icon fa-users"><span>People</span></a>
+        <a href="#api" class="analytics-page-nav icon fa-download"><span>API</span></a>
+        <a href="#about" class="analytics-page-nav icon fa-github"><span>About</span></a>
       </nav>
 
       <!-- Main -->
@@ -134,7 +134,7 @@
           <p>
             You can download the source, or let me know about problems
             on
-            <a href="https://github.com/iantruslove/spam-and-eggs">
+            <a class="instrument" href="https://github.com/iantruslove/spam-and-eggs">
               GitHub</a>.
           </p>
 
@@ -143,7 +143,7 @@
             If you like this, or if you hate it, I'd love to hear
             from you. Drop me a line:
             <br><span class="fa fa-twitter"></span>
-            <a href="https://twitter.com/iantruslove">@iantruslove</a>
+            <a class="instrument" href="https://twitter.com/iantruslove">@iantruslove</a>
             <br><span class="fa fa-envelope-o"></span> first dot last
             at gmail dot com.
           </p>
@@ -153,7 +153,7 @@
             The personal information is generated from a couple of
             lists of common names and email domains, plus some basic
             frequency distribution models. I use the generators in
-            <a href="https://github.com/clojure/test.check">test.check</a>
+            <a class="instrument" href="https://github.com/clojure/test.check">test.check</a>
             to select items from lists, because it makes it really easy.
           </p>
 
@@ -167,7 +167,7 @@
 
           <p>
             The email text is generated with
-            a <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov
+            a <a class="instrument" href="http://en.wikipedia.org/wiki/Markov_chain">Markov
             chain</a>. There is only one model currently in use, and
             it was trained on the first couple of paragraphs from
             Douglas Adams' "Hitchhiker's Guide to the Galaxy". (You'd
@@ -177,7 +177,7 @@
           <h3>Tech</h3>
           <p>
             Spam and Eggs is written in Clojure, and hosted
-            by <a href="http://www.heroku.com"> Heroku
+            by <a class="instrument" href="http://www.heroku.com"> Heroku
             </a>. Both of these are quite great.
           </p>
 
@@ -187,7 +187,7 @@
             emails. The quality of results of the statistical, text
             analytics and machine learning work is quite dependent on
             the input data, and I was getting tired of hacking emails
-            from the <a href="https://www.cs.cmu.edu/~./enron/"> Enron
+            from the <a class="instrument" href="https://www.cs.cmu.edu/~./enron/"> Enron
               corpus</a> into the shape I wanted. At first I was just
             creating email addresses with real-looking names, but it
             quickly spread into text generation using Markov. It's a
@@ -219,5 +219,6 @@
       ga('create', 'UA-60781828-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <script src="js/analytics.js"></script>
   </body>
 </html>
