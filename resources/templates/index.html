@@ -98,12 +98,17 @@
             <h2>People</h2>
           </header>
           <p>
-
+            Some generated names and addresses, if you need such
+            things. I suppose there's a pretty decent chance they're
+            real people and functional addresses too, so don't put
+            them into live systems (for which you can use the reserved
+            domain
+            <a class="instrument" href="https://tools.ietf.org/html/rfc2606#section-3">&lt;name&gt;@example.com</a>).
           </p>
           <div>
             <div class="row">
               <div class="2u"></div>
-              <div class="8u">
+              <div id="people-container" class="8u">
                 {% for person in people %}
                 <p>
                   <span class="fa fa-user"></span> {{person.first-name}} {{person.last-name}}<br>
@@ -113,13 +118,13 @@
               <div class="2u"></div>
             </div>
 
-            <!-- <div class="row"> -->
-            <!--   <div class="2u"></div> -->
-            <!--   <div class="8u"> -->
-            <!--     <input id="button-regenerate-contact-list" type="submit" value="Get 5 More..." /> -->
-            <!--   </div> -->
-            <!--   <div class="2u"></div> -->
-            <!-- </div> -->
+            <div class="row">
+              <div class="2u"></div>
+              <div class="8u">
+                <input id="button-get-more-contacts" type="submit" value="Get 5 More..." />
+              </div>
+              <div class="2u"></div>
+            </div>
 
           </div>
         </article>
@@ -220,5 +225,6 @@
       ga('send', 'pageview');
     </script>
     <script src="js/analytics.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
