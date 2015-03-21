@@ -45,7 +45,7 @@
   [transition-fns]
   (letfn [(generator [word transition-fns]
             (cons word (lazy-seq
-                        (if (.endsWith word ".")
+                        (if (re-find #"[\.\?!]$" word)
                           nil
                           (if-let [transition-fn (transition-fns word)]
                             (generator (transition-fn) transition-fns)
