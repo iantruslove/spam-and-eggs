@@ -10,4 +10,11 @@
       (is (= 200 (:status resp)))
       (let [body (json/parse-string (:body resp) true)]
         (is (= 10 (:num-addresses body)))
-        (is (= 10 (count (:addresses body))))))))
+        (is (= 10 (count (:addresses body)))))))
+
+  (testing "email"
+    (with-response [resp handler :get "/api/emails"]
+      (is (= 200 (:status resp)))
+      (let [body (json/parse-string (:body resp) true)]
+        (is (every? (-> body :emails first)
+                    #{:from :to :subject :date :message-id :body}))))))

@@ -29,10 +29,17 @@
       :addresses (->> (persona/generate-personas num-addresses)
                       (map email/personal-info-map))})))
 
+(defn get-emails-handler [_]
+  (let [email (apply email/email (persona/generate-personas 2))]
+    (resp/response
+     {:num-emails 1
+      :emails [email]})))
+
 (def handler
   (-> (routes (context "/api" []
                 (GET "/_status" req (resp/response {:status :ok}))
-                (GET "/email-addresses" req (get-email-addresses-handler req))))
+                (GET "/email-addresses" req (get-email-addresses-handler req))
+                (GET "/emails" req (get-emails-handler req))))
       (ring-json/wrap-json-response {:pretty true})
       wrap-trailing-newline
       keyword-params/wrap-keyword-params
