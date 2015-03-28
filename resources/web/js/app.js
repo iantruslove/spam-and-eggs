@@ -2,16 +2,20 @@
 
   var onMoreContactsClick,
       onMoreContactsLoaded,
-      spamApp = window.spamApp || {};
+      spamApp = window.spamApp || {},
+      contactTemplate;
+
+  // Load templates
+  $.get('/templates/contact.hbs', function (data) {
+    Handlebars.registerPartial('templates/contact', data);
+    contactTemplate = Handlebars.compile(data);
+  });
 
   onMoreContactsLoaded = function (data, status, jqXHR) {
     data.addresses.forEach(function (val, idx) {
-      $("#people-container").append( $('<p> <span class="fa fa-user"></span> ' +
-                                       val["first-name"] + ' ' + val["last-name"] +
-                                       '<br> <span class="fa fa-envelope-o"></span> ' +
-                                       val["email-address"].replace(/</g,"&lt;").replace(/>/g,"&gt;") +
-                                       '</p>')
-                                   );
+      $("#people-container").append(
+        $(contactTemplate(val))
+      );
     });
     spamApp._resize();
   };

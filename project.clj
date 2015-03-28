@@ -12,6 +12,7 @@
   :dependencies [[cheshire "5.4.0"]
                  [clj-http "1.0.1"]
                  [compojure "1.3.2"]
+                 [hbs "0.8.0"]
                  [org.apache.lucene/lucene-core "5.0.0"]
                  [org.apache.lucene/lucene-analyzers-common "5.0.0"]
                  [org.clojure/clojure "1.6.0"]
@@ -19,5 +20,4 @@
                  [org.clojure/tools.logging "0.3.1"]
                  [ring "1.3.2"]
                  [ring/ring-json "0.3.1"]
-                 [selmer "0.8.2"]
                  [sonian/carica "1.1.0" :exclusions [[cheshire]]]])
