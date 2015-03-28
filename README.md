@@ -45,7 +45,7 @@ immediately use to generate license-esque email text:
 * More realistic paragraph and sentence distributions
 * More funner models
 * Expose model generation parameters in front end
-* Only serve analytics in deployment environment, not in dev
+* <strike>Only serve analytics in deployment environment, not in dev</strike>
 * CORS
 * Infinite scroll instead of refresh buttons - perhaps with http://www.infinite-scroll.com/
 * Don't just have a huge bunch of functions for the Markov generator.

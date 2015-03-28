@@ -5,6 +5,7 @@
             [ring.util.response :as resp]
             [selmer.parser :as selmer]
             [spam-and-eggs.email :as email]
+            [spam-and-eggs.environment :as environment]
             [spam-and-eggs.persona :as persona]))
 
 (def set-template-path! (delay (selmer/set-resource-path!
@@ -17,7 +18,8 @@
                           {:people (->> (persona/generate-personas 5)
                                         (map email/personal-info-map))
                            :email (apply email/email
-                                         (persona/generate-personas 2))})
+                                         (persona/generate-personas 2))
+                           :env (environment/env-type)})
       resp/response
       (resp/header "content-type" "text/html;charset=UTF-8")))
 
