@@ -39,19 +39,27 @@
       <div id="main">
 
         <!-- Email -->
-        <article id="email" class="panel">
+        <article id="home" class="panel">
           <header>
             <h1>Spam and Eggs</h1>
             <p>Tasty, tasty emails</p>
+          </header>
+        </article>
+
+        <!-- Email -->
+        <article id="email" class="panel">
+          <header>
+            <h2>Email</h2>
+            <p>100% generated, 0% real.</p>
           </header>
 
           <div>
             <div class="row">
               <div class="page-action-container 12u">
                 <ul>
-                <li><a href="#" class="icon fa-refresh" id="refresh-email">refresh</a>
-                {{! <li><a href="#" class="icon fa-cloud-download">api call</a> }}
-                {{! <li><a href="#" class="icon fa-info-circle">show info</a> }}
+                <li><a data-action="refresh" href="#email-refresh" class="icon fa-refresh" id="refresh-email">refresh</a>
+                {{! <li><a href="#email-api-call" class="icon fa-cloud-download">api call</a> }}
+                {{! <li><a href="#email-show-info" class="icon fa-info-circle">show info</a> }}
                 </ul>
               </div>
             </div>
@@ -108,7 +116,7 @@
             real people and functional addresses too, so don't put
             them into live systems (for which you can use the reserved
             domain
-            <a class="instrument" href="https://tools.ietf.org/html/rfc2606#section-3">&lt;name&gt;@example.com</a>).
+            <a href="https://tools.ietf.org/html/rfc2606#section-3">&lt;name&gt;@example.com</a>).
           </p>
           <div>
             <div class="row">
@@ -142,7 +150,7 @@
           <p>
             You can download the source, or let me know about problems
             on
-            <a class="instrument" href="https://github.com/iantruslove/spam-and-eggs">
+            <a href="https://github.com/iantruslove/spam-and-eggs">
               GitHub</a>.
           </p>
 
@@ -151,7 +159,7 @@
             If you like this, or if you hate it, I'd love to hear
             from you. Drop me a line:
             <br><span class="fa fa-twitter"></span>
-            <a class="instrument" href="https://twitter.com/iantruslove">@iantruslove</a>
+            <a href="https://twitter.com/iantruslove">@iantruslove</a>
             <br><span class="fa fa-envelope-o"></span> first dot last
             at gmail dot com.
           </p>
@@ -161,7 +169,7 @@
             The personal information is generated from a couple of
             lists of common names and email domains, plus some basic
             frequency distribution models. I use the generators in
-            <a class="instrument" href="https://github.com/clojure/test.check">test.check</a>
+            <a href="https://github.com/clojure/test.check">test.check</a>
             to select items from lists, because it makes it really easy.
           </p>
 
@@ -175,7 +183,7 @@
 
           <p>
             The email text is generated with
-            a <a class="instrument" href="http://en.wikipedia.org/wiki/Markov_chain">Markov
+            a <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov
             chain</a>. There is only one model currently in use, and
             it was trained on the first couple of paragraphs from
             Douglas Adams' "Hitchhiker's Guide to the Galaxy". (You'd
@@ -185,7 +193,7 @@
           <h3>Tech</h3>
           <p>
             Spam and Eggs is written in Clojure, and hosted
-            by <a class="instrument" href="http://www.heroku.com"> Heroku
+            by <a href="http://www.heroku.com"> Heroku
             </a>. Both of these are quite great.
           </p>
 
@@ -195,7 +203,7 @@
             emails. The quality of results of the statistical, text
             analytics and machine learning work is quite dependent on
             the input data, and I was getting tired of hacking emails
-            from the <a class="instrument" href="https://www.cs.cmu.edu/~./enron/"> Enron
+            from the <a href="https://www.cs.cmu.edu/~./enron/"> Enron
               corpus</a> into the shape I wanted. At first I was just
             creating email addresses with real-looking names, but it
             quickly spread into text generation using Markov. It's a
@@ -205,7 +213,7 @@
           <h3>License</h3>
           <p>
             This work is licensed under
-            the <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
+            the <a class="no-instrument" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse
               Public License</a>. You're on your own, kid.
           </p>
         </article>
@@ -215,7 +223,8 @@
       <!-- Footer -->
       <div id="footer">
         <ul class="copyright">
-          <li>Spam and Eggs. &copy; Ian Truslove.</li><li>Sweet site template by <a href="http://html5up.net">HTML5 UP</a></li>
+          <li>Spam and Eggs. &copy; Ian Truslove.</li>
+          <li>Sweet site template by <a class="no-instrument" href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </div>
     </div>
