@@ -37,16 +37,19 @@ immediately use to generate license-esque email text:
   * <strike>Front end layout</strike>
   * <strike>AJAX and refresh button</strike>
 * Email structure generator
-  * API
+  * <strike>API</strike>
   * <strike>Web app front end</strike>
-  * AJAX and refresh button
+  * <strike>AJAX and refresh button</strike>
 * <strike>Token frequency analyzer to generate Markov chain transition frequencies</strike>
 * <strike>Externalize Markov model data (into binary files?)</strike>
 * More realistic paragraph and sentence distributions
+* Back button navigation
 * More funner models
 * Expose model generation parameters in front end
 * <strike>Only serve analytics in deployment environment, not in dev</strike>
 * CORS
+* Front-page visualization of Markov chain generation of text
+* User-submittable text for analyzing to create the Markov model
 * Infinite scroll instead of refresh buttons - perhaps with http://www.infinite-scroll.com/
 * Don't just have a huge bunch of functions for the Markov generator.
 * Page-by-page analytics

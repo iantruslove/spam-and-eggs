@@ -47,8 +47,17 @@
 
           <div>
             <div class="row">
+              <div class="page-action-container 12u">
+                <ul>
+                <li><a href="#" class="icon fa-refresh" id="refresh-email">refresh</a>
+                {{! <li><a href="#" class="icon fa-cloud-download">api call</a> }}
+                {{! <li><a href="#" class="icon fa-info-circle">show info</a> }}
+                </ul>
+              </div>
+            </div>
+            <div class="row">
               <div class="1u"></div>
-              <div class="10u">
+              <div class="10u" id="email-container">
                 <!-- TODO: make this markup a bit more semantic, and style it with CSS -->
                 {{#emails}}
                 {{> web/templates/email }}
