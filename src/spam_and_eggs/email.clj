@@ -33,7 +33,9 @@
 (defn email [from-persona to-persona]
   (let [markov-model (markov/read-model (:text-generation-model from-persona))
         to (full-email-address to-persona)
-        subject (para markov-model 1)
+        subject (-> (para markov-model 1)
+                    (string/split #"[,.;()]")
+                    first)
         date (Date.)
         message-id (uuid)
         body-text (body markov-model 4 3)]
