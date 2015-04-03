@@ -137,27 +137,8 @@
             <h2>API</h2>
           </header>
 
-          <h3>Status: work in progress</h3>
-          <p>
-            The point of this tool was to provide a way to generate a
-            whole number of emails representing an individual's or an
-            organization's email interactions over a period of
-            time. There is obviously API trying to get out.
-          </p>
-          <p>
-            Unfortunately, I haven't quite got that done yet. Check
-            back soon.
-          </p>
-          <!-- <p> -->
-          <!--   This website provides examples of what the API can -->
-          <!--   provide, but the API is actually way better for generating -->
-          <!--   "real" test corpuses. -->
-          <!-- </p> -->
-          <!-- <p> -->
-          <!--   Right now, I don't have any API docs for you. Sorry, I'm -->
-          <!--   working on it. If you're really keen, check out the JS -->
-          <!--   source, you'll get the idea. -->
-          <!-- </p> -->
+          <div id="api-markdown" class="api-doc">
+          </div>
         </article>
 
         <!-- People -->
@@ -261,6 +242,8 @@
       </div>
     </div>
 
+    <script src="js/Showdown.min.js"></script>
+    <script src="js/extensions/twitter.min.js"></script>
     <script src="js/handlebars-v3.0.0.js"></script>
     <script>
 {{#if prod}}
@@ -276,7 +259,6 @@
       ga('create', 'UA-60781828-1', 'auto');
       ga('send', 'pageview');
     </script>
-
     <script src="js/analytics.js"></script>
     <script src="js/app.js"></script>
   </body>

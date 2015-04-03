@@ -61,8 +61,28 @@
     }
   };
 
+  var renderApi = function () {
+    var converter = new Showdown.converter({ extensions: ['twitter'] });
+    $.ajax({
+      url: "/doc/API.md",
+      success: function (data) {
+        $("#api-markdown").html(
+          converter.makeHtml(
+            data.
+              // Remove the top-level headline
+              replace(/^# API.*$/gm, "").
+              // Downgrade every heading by one level
+              replace(/^#/gm, "##")
+          )
+        );
+        spamApp._resize();
+      }
+    });
+  };
+
   $(function () {
     $("#button-get-more-contacts").click(onMoreContactsClick);
     $("#refresh-email").click(preventingDefault(onRefreshEmailClick));
+    renderApi();
   });
 })(jQuery);

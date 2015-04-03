@@ -6,9 +6,13 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :uberjar-name "spam-and-eggs.jar"
-  :profiles {:uberjar {:aot :all}
+  :profiles {:uberjar {:aot :all
+                       :prep-tasks ["javac" "compile" "resource"]
+                       :resource {:resource-paths ["doc"]
+                                  :target-path "resources/web/doc"}}
              :analyzer {:main spam-and-eggs.tools.analyzer}}
   :aliases {"analyze" ["with-profile" "analyzer" "run"]}
+  :plugins [[lein-resource "14.10.1"]]
   :dependencies [[cheshire "5.4.0"]
                  [clj-http "1.0.1"]
                  [compojure "1.3.2"]
