@@ -478,8 +478,41 @@
         .page-action-container .icon:before {
             padding: 0 3px 0 0;
         }
-		
 
+        #splash-nav {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        #splash-nav li {
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        #splash-nav .item {
+            background: rgba(1, 1, 1, 0.1);
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 35px 0 15px 0;
+        }
+
+        #splash-nav a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.25s ease-in-out;
+        }
+
+        #splash-nav a:hover {
+            text-decoration: none;
+            color: rgb(117, 117, 117);
+        }
+        
+        #splash-nav .icon:before {
+            padding: 15px;
+            font-size: 300%;
+        }
         
 /*********************************************************************************/
 /* Footer                                                                        */
