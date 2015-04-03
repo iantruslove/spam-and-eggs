@@ -4,6 +4,6 @@
             [spam-and-eggs.http.api :as api]
             [spam-and-eggs.http.html :as html]))
 
-(def handler (routes html/handler
-                     api/handler
+(def handler (routes #'html/handler
+                     #'api/handler
                      (route/not-found "Page not found")))
