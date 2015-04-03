@@ -78,12 +78,13 @@ window.spamApp = {};
 
     spamApp._reposition = function () {
       if (skel.isActive('desktop')) {
-        if (skel.vars.isTouch && (window.orientation == 0 || window.orientation == 180))
+        if (skel.vars.isTouch && (window.orientation == 0 || window.orientation == 180)) {
           $wrapper.css('padding-top', Math.max((($window.height() - (panels[activePanelId].outerHeight() + $footer.outerHeight())) / 2) - $nav.height(), 30) + 'px');
-        else
-          $wrapper.css('padding-top', Math.min(
-            ((($window.height() - panels[firstPanelId].height()) / 2) - $nav.height()),
-            100) + 'px');
+        } else {
+          $wrapper.css('padding-top', '60px'
+                       //Math.min(((($window.height() - panels[firstPanelId].height()) / 2) - $nav.height()), 100) + 'px'
+                      );
+        }
       };
     };
 
