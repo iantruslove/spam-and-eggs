@@ -32,34 +32,35 @@ immediately use to generate license-esque email text:
 
 ## TODO
 
-* Person info generator
+* Person generator
   * <strike>API</strike>
   * <strike>Front end layout</strike>
   * <strike>AJAX and refresh button</strike>
-* Email structure generator
+* Email generator
   * <strike>API</strike>
   * <strike>Web app front end</strike>
   * <strike>AJAX and refresh button</strike>
-* <strike>Token frequency analyzer to generate Markov chain transition frequencies</strike>
-* <strike>Externalize Markov model data (into binary files?)</strike>
-* More realistic paragraph and sentence distributions
-* Back button navigation
-* More funner models
-* Expose model generation parameters in front end
-* <strike>Only serve analytics in deployment environment, not in dev</strike>
-* CORS
-* Front-page visualization of Markov chain generation of text
-* User-submittable text for analyzing to create the Markov model
-* Infinite scroll instead of refresh buttons - perhaps with http://www.infinite-scroll.com/
-* Don't just have a huge bunch of functions for the Markov generator.
-* Page-by-page analytics
-  * Links:
-    * https://developers.google.com/analytics/devguides/collection/analyticsjs/
-    * https://hacks.mozilla.org/2015/03/an-analytics-primer-for-developers/
-* Drop a release. Start and publish a CHANGELOG (perhaps with https://github.com/evilstreak/markdown-js)
-* Show build and version info in footer
-* Reply and Forward simulation
-* Simulate different MUAs
+  * <strike>Token frequency analyzer to generate Markov chain transition frequencies</strike>
+  * <strike>Externalize Markov model data (into binary files?)</strike>
+  * More realistic paragraph and sentence distributions
+  * More funner models
+  * Don't just have a huge bunch of functions for the Markov generator.
+  * Reply and Forward simulation
+  * Simulate different MUAs
+* Web app
+  * <strike>Only serve analytics in deployment environment, not in dev</strike>
+  * <strike>Page-by-page analytics</strike>
+  * Back button navigation
+  * Expose model generation parameters in front end
+  * CORS
+  * Infinite scroll instead of refresh buttons - perhaps with http://www.infinite-scroll.com/
+  * Show build and version info in footer
+* New Features
+  * Front-page visualization of Markov chain generation of text
+  * User-submittable text for analyzing to create the Markov model
+* Misc
+  * Start and publish a CHANGELOG
+  * Drop a first release. 
 
 ## License
 
