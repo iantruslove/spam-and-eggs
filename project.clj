@@ -21,7 +21,17 @@
                  [org.apache.lucene/lucene-analyzers-common "5.0.0"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/test.check "0.7.0"]
-                 [org.clojure/tools.logging "0.3.1"]
                  [ring "1.3.2"]
                  [ring/ring-json "0.3.1"]
-                 [sonian/carica "1.1.0" :exclusions [[cheshire]]]])
+                 [sonian/carica "1.1.0" :exclusions [[cheshire]]]
+                 ;; Logging
+                 [org.slf4j/slf4j-api "1.7.7"]
+                 [org.slf4j/jul-to-slf4j "1.7.7"]
+                 [org.slf4j/jcl-over-slf4j "1.7.7"]
+                 [org.slf4j/log4j-over-slf4j "1.7.7"]
+                 [ch.qos.logback/logback-core "1.1.2"]
+                 [ch.qos.logback/logback-classic "1.1.2"]
+                 [org.clojure/tools.logging "0.2.6"]]
+  :exclusions [org.slf4j/slf4j-log4j12
+               org.slf4j/slf4j-api
+               org.slf4j/slf4j-nopn])
