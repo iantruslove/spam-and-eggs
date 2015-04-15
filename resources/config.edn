@@ -301,7 +301,11 @@
                [2 "Griffin"]
                [2 "Diaz"]
                [2 "Hayes"]]
-  :text-generation-models #{:business :h2g2 :metamorphosis :apache-kafka}
+  :text-generation-models #{:apache-kafka
+                            :business
+                            :h2g2
+                            :green
+                            :metamorphosis}
   ;; source: https://github.com/mailcheck/mailcheck/wiki/list-of-popular-domains
   :domains {:default ["aol.com" "att.net" "comcast.net" "facebook.com"
                       "gmail.com" "gmx.com" "googlemail.com" "google.com"
